@@ -1,18 +1,18 @@
 #!/bin/bash
 
 # Instalação Padrão
-# echo -e "\e[00;31mCurl é necessario, será instalado.\e[00m"
-# sudo apt-get install -y php5-curl
+echo -e "\e[00;31mCurl é necessario, será instalado.\e[00m"
+sudo apt-get install -y php5-curl
 
-# echo -e "\e[00;31mGit é necessario, será instalado.\e[00m"
-# sudo apt-get install -y git-all
+echo -e "\e[00;31mGit é necessario, será instalado.\e[00m"
+sudo apt-get install -y git
 
 # Chrome Browser
 echo -e "\e[00;31mDeseja instalar Chrome? [Y/n]\e[00m"
 read answer
 if [[ $answer =~ "Y" ]]; then
     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-    sudo sh -c 'echo -e "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
     sudo apt-get update
     sudo apt-get install -y google-chrome-stable
 fi
@@ -30,11 +30,10 @@ fi
 echo -e "\e[00;31mDeseja instalar Sublime Text 3? [Y/n]\e[00m"
 read answer
 if [[ $answer =~ "Y" ]]; then
-	sudo apt-get update
-    sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+	sudo add-apt-repository ppa:webupd8team/sublime-text-3
   	sudo apt-get update
-  	sudo apt-get install -y sublime-text-install
-  	echo -e "\e[01;33Packages para serem instalados Sublime (./packages-sublime.txt)\e[1;33m"
+  	sudo apt-get install -y sublime-text-installer
+  	echo -e "\e[01;33mPackages para serem instalados Sublime (./packages-sublime.txt)\e[1;33m"
   	echo -e "Color Scheme
 	  	Additional PHP Snippets
 	  	All Autocomplete
@@ -78,7 +77,7 @@ if [[ $answer =~ "Y" ]]; then
 	sudo apt-get install -y zsh
 	sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 	cd ~/Downloads
-	git clone git@github.com:hugocarreira/oh-my-zsh-theme.git zsh-theme
+	git clone https://github.com/hugocarreira/oh-my-zsh-theme.git zsh-theme
 	cd zsh-theme
 	cp -i honukai.zsh-theme ~/.oh-my-zsh/themes/
 	cp -i .zshrc ~/
