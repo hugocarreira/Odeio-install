@@ -2,7 +2,7 @@
 
 Faça o clone do projeto
 ```
-git clone git@github.com:willianjusten/odeio-script.git
+git clone git@github.com:hugocarreira/Odeio-install.git
 ```
 
 Dê permissão de execução no arquivo do script
