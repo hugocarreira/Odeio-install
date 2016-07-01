@@ -12,7 +12,7 @@ chmod +x install.sh
 
 Agora basta executar
 ```
-./odeio-install.sh
+./install.sh
 ```
 
 Programas instalados:
