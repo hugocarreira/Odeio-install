@@ -15,7 +15,7 @@ Agora basta executar
 ./install.sh
 ```
 
-Programas instalados:
+Opções de programas:
 > Chrome Browser  
 > Spotify  
 > Sublime Text 3 / Arquivo com lista dos packages (./packages-sublime.txt)  
