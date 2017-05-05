@@ -9,7 +9,7 @@ sudo apt-get install docker-engine
 sudo service docker start
 sudo usermod -aG docker $USER
 
-echo -e "\e[00;31mDocker instalados com sucesso, é necessário reiniciar o computador, deseja continuar? (y/n)\e[00m"
+echo -e "\e[00;31mDocker instalado com sucesso, é necessário reiniciar o computador, deseja continuar? (y/n)\e[00m"
 read answer
 
 if [[ $answer =~ "y" ]]; then
